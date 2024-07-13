@@ -5,7 +5,6 @@ Welcome to GlobeTrek! Your ultimate travel agency for unforgettable adventures a
 ## Features
 
 - User-friendly interface for easy booking
-- Secure payment gateway
 - Wide range of travel packages
 - Personalized travel recommendations
 - 24/7 customer support
