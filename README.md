@@ -49,7 +49,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contact
 
-If you have any questions or feedback, feel free to reach out to us at [your-email@example.com].
+If you have any questions or feedback, feel free to reach out to us at srmeraj9@gmail.com.
 
 ---
 
