@@ -1090,7 +1090,76 @@ section {
 .navbar-expand .navbar-toggler {
   display: none;
 }
+.dropdown {
+  position: relative;
+}
 
+.dropdown-toggle {
+  white-space: nowrap;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+ul.dropdown-menu.show {
+  display: block;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.175) !important;
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #5e6282;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #555875;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+.dropdown-item:active {
+  color: #fffefe;
+  text-decoration: none;
+  background-color: #f1a501;
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #5e6282;
+  text-align: left;
+  list-style: none;
+  background-color: #fffefe;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0.3rem;
+  left: auto;
+  right: 0;
+  top: 38px;
+}
 @media (min-width: 992px) {
   .navbar-expand {
     -ms-flex-wrap: nowrap;
@@ -1711,24 +1780,45 @@ section {
     z-index: 11;
   }
   .nav__content ul.navbar-nav {
-    position: absolute;
+    position: relative;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
     z-index: 11;
     background: whitesmoke;
     width: 100%;
-    height: 360px;
+    min-height: 360px;
+    padding-bottom: 2rem;
+    gap: 10px;
   }
 
   .navbar-expand .navbar-toggler {
     display: block;
   }
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .navbar-nav .nav-item:last-child .dropdown-toggle,
+  .navbar-nav .nav-item .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.3rem 0;
+  }
+
   .navbar-nav .nav-item:last-child {
     padding-right: 1.9rem;
     padding-left: 1.86rem;
   }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+  }
+  ul.dropdown-menu.show {
+    box-shadow: none !important;
+  }
 }
+
 @media (max-width: 768px) {
   .service-card .card-body {
     padding: 1.6rem;
